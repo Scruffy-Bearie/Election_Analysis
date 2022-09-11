@@ -6,21 +6,27 @@ import os
 results_load = os.path.join("election_results.csv")
 
 #Create a filename variable to a direct or indirect path to the file
-election_save = os.path.join("election_analysis.txt")
+election_save = os.path.join("election_results.txt")
 
 #1 Initialise a total vote counter
 total_votes = 0
 
 #Create List for Candidate Names
 candidate_options = []
+county_options = []
 
 #Create a dictionary to hold candidate votes
 candidate_votes = {}
+county_votes = {}
 
 #Winning candidate and winning count tracker
 winning_canidate = ""
 winning_count = 0
 winning_percentage = 0
+
+winning_county = ""
+winning_county_count = 0
+
 
 #Open the election results and read the file
 with open(results_load) as election_data:
@@ -53,6 +59,14 @@ with open(results_load) as election_data:
         #tally candidate votes
         candidate_votes[candidate_name] = candidate_votes[candidate_name] + 1
 
+        county_name = row[1]
+        if county_name not in county_options:
+            county_options.append(county_name)
+
+            county_votes[county_name] = 0
+
+        county_votes[county_name] = county_votes[county_name] + 1
+
     # Save the results to our text file.
 with open(election_save, "w") as txt_file:
 
@@ -66,6 +80,30 @@ with open(election_save, "w") as txt_file:
    
         # Save the final vote count to the text file.
     txt_file.write(election_results)
+
+#Determine the percentage for each county
+    for county_name in county_votes:
+        cvotes = county_votes[county_name]
+        cvote_percentage = (float(cvotes/total_votes))*100
+        county_results = (
+            f"{county_name}: {cvote_percentage:.1f}% ({cvotes:,})\n")
+
+        print(county_results)
+        txt_file.write(county_results)
+
+        if (cvotes > winning_county_count):
+            winning_county_count = cvotes
+        
+            winning_county = county_name
+
+     #Print election summary
+    winning_county_summary = (
+        f"-------------------------\n"
+        f"Largest County Turnout: {winning_county}\n"
+        f"-------------------------\n")       
+
+    print(winning_county_summary)
+    txt_file.write(winning_county_summary)
 
 #Determine the percentage for each candidate by looping through candidate_votes library
 #iterate through the candidate list
