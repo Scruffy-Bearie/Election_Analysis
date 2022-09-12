@@ -26,7 +26,7 @@ Using a “conditional if” statement within the “for loop” described above
 ### •	Candidate Votes and Percentages:
 Similar to the process used for counting the number of votes in each county, a “conditional if” statement was established within the “for loop” used to count the Total Votes and it was possible to create a list of candidate names and determine the number of votes cast for each candidate (see Figure 3: Coding to Determine Number of Votes for Each Candidate).  Through comparison to the Total Votes determined above, it was then possible to determine the percentage of votes cast for each candidate.
 
-Link to Figure3
+![](https://github.com/Scruffy-Bearie/Election_Analysis/blob/main/Figure3.png)
 
 **Candidate Votes and Percentages:** <br /> 
 **Charles Casper Stockham:** 85,213 votes; 23.0% of Total Votes <br />
