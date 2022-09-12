@@ -7,7 +7,7 @@ The results of the election audit and the coding used to acquire those results a
 ### •	Total Votes:
 Using an operation to eliminate the header row in the original data set and a “for loop" to count through the remaining rows of data (see Figure 1: Coding to Determine Total Number of Votes), it was possible to determine the total number of votes cast in the election.
 
-Link to Figure1
+![](https://github.com/Scruffy-Bearie/Election_Analysis/blob/main/Figure1.png)
 
 **Total Votes = 369,711**
 
