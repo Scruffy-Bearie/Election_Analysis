@@ -14,7 +14,7 @@ Using an operation to eliminate the header row in the original data set and a �
 ### •	County Votes and Percentages:
 Using a “conditional if” statement within the “for loop” described above, it was possible to create a list of county names and determine the number of votes cast in each county (see Figure 2: Coding to Determine Number of Votes in Each County).  Through comparison to the Total Votes determined above, it was then possible to determine the percentage of votes cast in each county.
 
-Link to Figure2
+![](https://github.com/Scruffy-Bearie/Election_Analysis/blob/main/Figure2.png)
 
 **County Votes:** <br />
 **Jefferson:** 38,855 votes cast; 10.5% of Total Votes <br />
