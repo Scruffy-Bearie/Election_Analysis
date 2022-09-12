@@ -1,4 +1,4 @@
-# Title
+# Using Visual Studio Code and Python for an Automated Audit of the Colorado Congressional Election
 ## Overview of Election Audit
 Election of a public official generally involves the collection of large data sets that require accurate tabulation and analysis.  Although it is possible to perform tabulation and analysis of such data sets using spread sheets, the process can be time consuming and prone to error.  Through use of programming interfaces such as Visual Studio Code and programming languages such as Python it is possible to automate tabulation processes thus saving time and reducing or eliminating errors.  The client for this project, The Colorado Board of Elections, wished to investigate the use of Python to automate the vote counting process not only to audit the results of the recent Congressional election but also to investigate the use of similar automation in future elections.  The following results and analysis represent an attempt to address these interests and possibilities.
 
@@ -36,7 +36,7 @@ Similar to the process used for counting the number of votes in each county, a â
 ### â€¢	Winning Candidate
 Through comparing the number of votes cast for each candidate and using an f-string print statement (see Figure 4: Coding to Determine and Display the Winning Candidate), it was possible to determine and display the overall winner of the Congressional Election.
 
-Link to Figure4
+![](https://github.com/Scruffy-Bearie/Election_Analysis/blob/main/Figure4.png)
 
 **Winner:** Diana Degette <br />
 **Winning Vote Count:** 272, 892 <br />
